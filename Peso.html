@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Peso en otro planeta</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>Tu peso en la tierra es distinto que en Marte y Jupiter</p>
+    <script>
+        var g_tierra = 9.8;
+        var g_Marte = 3.7;
+        var g_Jupiter = 24.5;
+        var peso = 77;
+
+        /* var r = prompt("Quieres saber tu peso o ver el preterminado? S/N");
+         r.charAt(r);
+         if (r == 's') {
+             alert("Correcto");
+             var usuario = prompt("Cual es tu peso: ");
+             usuario = parseFloat(usuario);
+
+             var peso_final = (usuario * g_Marte) / g_tierra;
+             var enter;
+             enter = parseFloat(peso_final);
+             document.write("Tu peso en Marte es: " + enter + " KG");
+
+         } else {
+             alert("Mostrare el peso definido");
+
+             var peso_final = (peso * g_Marte) / g_tierra;
+             var enter;
+             enter = parseFloat(peso_final);
+             document.write("Tu peso en Marte es: " + enter + " KG");
+
+         }*/
+
+        var peso_usuario;
+        alert("Bienvenido a la pagina de pesos en otros planetas!");
+        do {
+            var flag = 0;
+            peso_usuario = parseInt(prompt("Ingrese su peso: "));
+
+            var res = prompt("1) Peso tuyo en Marte\n 2) peso tuyo en Jupiter");
+            res = parseInt(res);
+            if (res == 1) {
+
+
+                var peso_final = (peso_usuario * g_Marte) / g_tierra;
+                var enter = parseInt(peso_final);
+                document.write("Tu peso en Marte es: " + enter + " KG");
+
+            } else if (res == 2) {
+                var peso_final = (peso_usuario * g_Jupiter) / g_tierra;
+                var enter = parseInt(peso_final);
+                document.write("Tu peso en Jupiter es: " + enter + " KG");
+            } else {
+                alert("Has dado una opcion que no existe!!");
+                flag = 1;
+            }
+
+        } while (flag == 1);
+    </script>
+
+</body>
+
+
+</html>
